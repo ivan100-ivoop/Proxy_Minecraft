@@ -40,7 +40,7 @@ If you opt for Playit, follow these steps:
 - Complete the setup in the [Playit.gg Web Interface](https://playit.gg/account/agents).
 - Once configured, copy the Playit configuration file:
 ```bash
-cp ~/.config/playit/playit.toml data/config/playit/playit.toml
+cp ~/.config//playit_gg/playit.toml data/config/playit/playit.toml
 ```
 
 ### 5. Run the Docker Container
