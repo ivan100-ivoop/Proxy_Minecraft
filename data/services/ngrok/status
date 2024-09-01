@@ -1,0 +1,28 @@
+#/bin/bash
+
+if [ -z "$proxy_type" ]; then
+    echo "Error: Environment variable 'proxy_type' is not set."
+    exit 1
+fi
+
+PIDFILE="/var/run/${proxy_type}.pid"
+
+if [ ! -f "$PIDFILE" ]; then
+    echo "$proxy_type is not running."
+    exit 1
+fi
+
+PID=$(cat "$PIDFILE")
+
+if ! [[ "$PID" =~ ^[0-9]+$ ]]; then
+    echo "Error: PID file '$PIDFILE' contains an invalid PID: $PID."
+    exit 1
+fi
+
+if ps -p "$PID" > /dev/null; then
+    echo "$proxy_type is running."
+    exit 0
+else
+    echo "$proxy_type is not running."
+    exit 1
+fi

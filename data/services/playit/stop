@@ -1,0 +1,11 @@
+#/bin/bash
+
+echo "Stopping Playit!"
+
+start-stop-daemon --stop --pidfile "/var/run/playit.pid"
+
+sleep 3
+
+exec /usr/local/extra/discord stop
+
+echo "Stopped!"

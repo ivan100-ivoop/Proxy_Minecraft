@@ -1,0 +1,13 @@
+#/bin/bash
+
+echo "Staring Playit!"
+
+start-stop-daemon --start --background --exec "/usr/local/extra/playit" --make-pidfile --pidfile "/var/run/playit.pid" -- --secret_wait --secret_path /root/.config/playit/playit.toml -l /var/log/proxy/playit.log >> /var/log/proxy/playit_service.log 2>&1
+
+sleep 10
+
+if [ -f "/var/run/playit.pid" ]; then
+    exec /usr/local/extra/discord
+fi
+
+echo "Started!"

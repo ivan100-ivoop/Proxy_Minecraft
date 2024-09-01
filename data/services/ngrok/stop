@@ -1,0 +1,11 @@
+#/bin/bash
+
+echo "Stopping ngrok!"
+
+start-stop-daemon --stop --pidfile "/var/run/ngrok.pid"
+
+sleep 3
+
+exec /usr/local/extra/discord stop
+
+echo "Stopped!"

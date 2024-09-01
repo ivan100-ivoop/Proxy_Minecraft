@@ -1,0 +1,13 @@
+#/bin/bash
+
+echo "Staring ngrok!"
+
+start-stop-daemon --start --background --exec "/usr/local/extra/ngrok" --make-pidfile --pidfile "/var/run/ngrok.pid" -- start --all >> /var/log/proxy/ngrok_service.log 2>&1
+
+sleep 10
+
+if [ -f "/var/run/ngrok.pid" ]; then
+    exec /usr/local/extra/discord
+fi
+
+echo "Started!"
