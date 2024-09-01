@@ -23,6 +23,9 @@ If you choose Ngrok, follow these steps:
 
 - Obtain your Ngrok AuthToken from the [Ngrok Dashboard](!https://dashboard.ngrok.com/get-started/your-authtoken).
 - Update the Ngrok configuration file located at data/config/ngrok/ngrok.yml.
+```yaml
+authtoken: <AuthToken>
+```
 
 ### 4. Playit Configuration
 If you opt for Playit, follow these steps:
