@@ -65,7 +65,9 @@ DSK_IMAGE: "<DISCORD_PICTURE>"      # Replace with the image URL for the webhook
 WEBHOOK_URL: "<DISCORD_WEBHOOK_URL>"  # Replace with the Webhook URL you copied earlier
 ```
 
-### Additional Information
-- **Ngrok**: A tunneling service that allows you to expose a local server to the internet.
-- **Playit**: An easy-to-use service for creating tunnels to your local servers.
+### Extra 
+```bash
+docker attach MinecraftProxy
+```
+- Commands: `proxy <start, stop, status>`, `getIP`
 
