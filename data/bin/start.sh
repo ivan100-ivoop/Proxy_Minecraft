@@ -1,5 +1,9 @@
 #/bin/bash
 
+chmod +x /etc/services/ngrok/*
+chmod +x /etc/services/playit/*
+chmod +x /usr/local/extra/*
+
 apt update
 apt install curl jq -y
 
@@ -16,4 +20,3 @@ if [ "$proxy_type" != "none" ]; then
 fi
 
 /bin/bash
-
