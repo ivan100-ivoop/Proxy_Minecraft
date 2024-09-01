@@ -7,7 +7,7 @@ services:
         stdin_open: true
         tty: true
         ports:
-            - '4040:4040'         # HTTP
+            - '4040:4040'         # HTTP (in use only for ngrok)
         volumes:
             - ./data/services:/etc/services
             - ./data/config:/root/.config
