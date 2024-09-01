@@ -27,6 +27,8 @@ If you choose Ngrok, follow these steps:
 authtoken: <AuthToken>
 addr: <IP>:<PORT> # Replace with host ip and port of service example: 192.168.1.101:25565 
 ```
+- The interface will be available at the following URL: http://<host_IP>:4040
+- For example, if your host IP address is `192.168.1.101`, you can access the interface by navigating to: http://192.168.1.101:4040
 
 ### 4. Playit Configuration
 If you opt for Playit, follow these steps:
