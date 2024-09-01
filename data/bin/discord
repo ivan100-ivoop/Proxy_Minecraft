@@ -1,0 +1,23 @@
+#/bin/bash
+
+if [ -z "$WEBHOOK_URL" ]; then
+    echo "Error: WEBHOOK_URL environment variables must be set."
+    exit 1
+fi
+
+USERNAME="${DSK_USERNAME:-TestHook}"
+LOGO="${DSK_IMAGE:-https://i.postimg.cc/CLSw2SW4/logo.png}"
+
+if [ $# -ne 1 ]; then
+    SERVER_IP=$(/usr/local/extra/getIP)
+    SERVER_DATA=$(printf 'New IP: ```%s```' "$SERVER_IP")
+else
+    SERVER_DATA="Server Is Offline!"
+fi
+
+EMBED=$(printf '{ "title": "Server IP Update", "color": 15258703, "description": "%s", "footer": { "text": "Server IP Update"}, "thumbnail": { "url": "%s"} }' "$SERVER_DATA" "$LOGO")
+PAYLOAD=$(printf '{"username": "%s", "avatar_url": "%s", "embeds": [%s] }' "$USERNAME" "$LOGO" "$EMBED")
+
+
+
+curl -X POST "$WEBHOOK_URL" -H "Content-Type: application/json" -d "$PAYLOAD"

@@ -1,0 +1,23 @@
+version: '3'
+services:
+    app:
+        image: 'ubuntu:latest'
+        container_name: MinecraftProxy
+        restart: always
+        stdin_open: true
+        tty: true
+        ports:
+            - '4040:4040'         # HTTP
+        volumes:
+            - ./data/services:/etc/services
+            - ./data/config:/root/.config
+            - ./data/log:/var/log/proxy
+            - ./data/bin/:/usr/local/extra
+        environment:
+            #DSK_USERNAME: "Server IP"
+            #DSK_IMAGE: "https://i.postimg.cc/CLSw2SW4/logo.png"
+            proxy_type: none # ngrok playit
+            PATH: "${PATH}:/usr/local/extra"
+            WEBHOOK_URL: "<DISCORD_WEBHOOK_URL>"
+        command: ["/bin/bash", "-c", "./usr/local/extra/start.sh"]
+

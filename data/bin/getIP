@@ -1,0 +1,15 @@
+#/bin/bash
+
+if [ -z "$proxy_type" ]; then
+    echo "Error: Environment variable 'proxy_type' is not set."
+    exit 1
+fi
+
+if [ "$proxy_type" == "ngrok" ]; then
+   curl -s "http://localhost:4040/api/tunnels/minecraft" | jq -r '.public_url' | sed 's|tcp://||'
+fi
+
+
+if [ "$proxy_type" == "playit" ]; then
+   playit --secret_path /root/.config/playit/playit.toml tunnels list | jq -r '.tunnels[0] | "\(.alloc.data.static_ip4):\(.alloc.data.port_start)"'
+fi
