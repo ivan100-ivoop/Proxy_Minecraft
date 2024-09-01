@@ -54,11 +54,10 @@ docker-compose up -d
 - Add the following environment variables in your Docker environment or `docker-compose.yml` file:
 
 ```yaml
-DSK_USERNAME: "Server IP"
-DSK_IMAGE: "https://i.postimg.cc/CLSw2SW4/logo.png"
-WEBHOOK_URL: "<DISCORD_WEBHOOK_URL>"
+DSK_USERNAME: "<DISCORD_USERNAME>"  # Replace with the name for the webhook profile
+DSK_IMAGE: "<DISCORD_PICTURE>"      # Replace with the image URL for the webhook profile
+WEBHOOK_URL: "<DISCORD_WEBHOOK_URL>"  # Replace with the Webhook URL you copied earlier
 ```
-- Replace `<DISCORD_WEBHOOK_URL>` with the Webhook URL you copied earlier.
 
 ### Additional Information
 - **Ngrok**: A tunneling service that allows you to expose a local server to the internet.
