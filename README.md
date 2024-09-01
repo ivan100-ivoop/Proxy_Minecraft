@@ -21,7 +21,7 @@ proxy_type: "<type>"  # Options: 'playit', 'ngrok'. Default: none
 ### 3. Ngrok Configuration
 If you choose Ngrok, follow these steps:
 
-- Obtain your Ngrok AuthToken from the [Ngrok Dashboard](!https://dashboard.ngrok.com/get-started/your-authtoken).
+- Obtain your Ngrok AuthToken from the [Ngrok Dashboard](https://dashboard.ngrok.com/get-started/your-authtoken).
 - Update the Ngrok configuration file located at data/config/ngrok/ngrok.yml.
 ```yaml
 authtoken: <AuthToken>
@@ -37,7 +37,7 @@ If you opt for Playit, follow these steps:
 ```bash
 ./data/bin/playit
 ```
-- Complete the setup in the [Playit.gg Web Interface](!https://playit.gg/account/agents).
+- Complete the setup in the [Playit.gg Web Interface](https://playit.gg/account/agents).
 - Once configured, copy the Playit configuration file:
 ```bash
 cp ~/.config/playit/playit.toml data/config/playit/playit.toml
