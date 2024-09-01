@@ -25,6 +25,7 @@ If you choose Ngrok, follow these steps:
 - Update the Ngrok configuration file located at data/config/ngrok/ngrok.yml.
 ```yaml
 authtoken: <AuthToken>
+addr: <IP>:<PORT> # Replace with host ip and port of service example: 192.168.1.101:25565 
 ```
 
 ### 4. Playit Configuration
