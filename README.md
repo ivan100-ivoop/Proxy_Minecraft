@@ -65,9 +65,10 @@ DSK_IMAGE: "<DISCORD_PICTURE>"      # Replace with the image URL for the webhook
 WEBHOOK_URL: "<DISCORD_WEBHOOK_URL>"  # Replace with the Webhook URL you copied earlier
 ```
 
-### Extra 
+### Extra Commands
 ```bash
 docker attach MinecraftProxy
 ```
-- Commands: `proxy <start, stop, status>`, `getIP`
+- `proxy <start, stop, status>`
+- `getIP`
 
