@@ -1,0 +1,30 @@
+#!/bin/bash
+
+if [ $# -ne 1 ]; then
+    echo "Usage: $0 <start|stop|restart>"
+    exit 1
+fi
+
+ARG1=$1
+
+if [ -z "$proxy_type" ]; then
+    echo "Error: Environment variable 'proxy_type' is not set."
+    exit 1
+fi
+
+BASE_DIR="/etc/services"
+FOLDER_PATH="${BASE_DIR}/${proxy_type}"
+
+if [ ! -x "$FOLDER_PATH" ]; then
+    echo "Error: Proxy Type '$proxy_type' does not exist at path $FOLDER_PATH."
+    exit 1
+fi
+
+EXEC_PATH="${FOLDER_PATH}/${ARG1}"
+
+if [ ! -x "$EXEC_PATH" ]; then
+    echo "Error: Invalid argument '$ARG1'."
+    exit 1
+fi
+
+exec "$EXEC_PATH"
