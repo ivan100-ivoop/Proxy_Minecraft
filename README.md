@@ -8,7 +8,7 @@ A Docker-based proxy setup for Minecraft servers, allowing you to seamlessly int
 - Before proceeding with the setup, ensure that the necessary scripts and binaries have executable permissions:
 
 ```bash
-chmod +x data/*/*.*
+chmod +x data/bin/start.sh
 ```
 
 ### 2. Select Proxy Type
