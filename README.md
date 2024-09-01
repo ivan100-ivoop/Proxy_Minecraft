@@ -43,6 +43,23 @@ cp ~/.config/playit/playit.toml data/config/playit/playit.toml
 docker-compose up -d
 ```
 
+### 6. Create a Discord Webhook
+- Go to your Discord server settings.
+- Navigate to **Integrations** > **Webhooks**.
+- Click **New Webhook** and configure it:
+  - Choose the channel where you want to receive the notifications.
+  - Copy the **Webhook URL**.
+
+### 7. Configure the Webhook in Your Environment
+- Add the following environment variables in your Docker environment or `docker-compose.yml` file:
+
+```yaml
+DSK_USERNAME: "Server IP"
+DSK_IMAGE: "https://i.postimg.cc/CLSw2SW4/logo.png"
+WEBHOOK_URL: "<DISCORD_WEBHOOK_URL>"
+```
+- Replace `<DISCORD_WEBHOOK_URL>` with the Webhook URL you copied earlier.
+
 ### Additional Information
 - **Ngrok**: A tunneling service that allows you to expose a local server to the internet.
 - **Playit**: An easy-to-use service for creating tunnels to your local servers.
