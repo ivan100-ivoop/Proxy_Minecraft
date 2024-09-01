@@ -20,12 +20,21 @@ If you choose Ngrok, follow these steps:
 ### 3. Playit Configuration
 If you opt for Playit, follow these steps:
 
-- Run the Playit setup via the binary located at ```bash ./data/bin/playit. ```
+- Run the Playit setup via the binary located at
+```bash
+./data/bin/playit.
+```
 - Complete the setup in the [Playit.gg Web Interface](!https://playit.gg/account/agents).
-- Once configured, copy the Playit configuration file: ```bash cp ~/.config/playit/playit.toml data/config/playit/playit.toml ```
+- Once configured, copy the Playit configuration file:
+```bash
+cp ~/.config/playit/playit.toml data/config/playit/playit.toml
+```
 
 ### 4. Run the Docker Container
-- After completing the configuration: ```bash docker-compose up -d ```
+- After completing the configuration:
+```bash
+docker-compose up -d
+```
 
 ### Additional Information
 - Ngrok: A tunneling service that allows you to expose a local server to the internet.
