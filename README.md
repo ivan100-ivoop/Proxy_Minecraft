@@ -44,5 +44,6 @@ docker-compose up -d
 ```
 
 ### Additional Information
-- ##Ngrok: A tunneling service that allows you to expose a local server to the internet.
-- ##Playit: An easy-to-use service for creating tunnels to your local servers.
+- **Ngrok**: A tunneling service that allows you to expose a local server to the internet.
+- **Playit**: An easy-to-use service for creating tunnels to your local servers.
+
